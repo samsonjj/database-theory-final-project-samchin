@@ -8,6 +8,7 @@ import {
 // components
 import Header from './components/headerComponent/header';
 import Footer from './components/footerComponent/footer';
+import PatientList from './components/patientListComponent/patientList';
 
 // includes (css and stuff?)
 
@@ -18,6 +19,7 @@ class App extends Component {
 				<div className="App">
 
 					<Header />
+					<PatientList />
 					<Footer />
 
 				</div>

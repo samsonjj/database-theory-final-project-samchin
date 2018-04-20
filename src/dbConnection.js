@@ -21,3 +21,10 @@ connection.connect(function(err) {
 	}
 	console.log('connected to health_insurance_database');
 });
+
+export default function list_patients() {
+	connection.query("select * from petients", function(err, result) {
+		if (err) throw err;
+		return result;
+	});
+}
