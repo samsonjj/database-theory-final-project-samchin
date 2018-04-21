@@ -21,8 +21,8 @@ export default class PatientList extends Component {
 		}).then(data => {
 			let patientsthing = data.patients.map((patient) => {
 				return (
-					<div>
-						{ patient.first_name }
+					<div key={patient.snn}>
+						{ patient.first_name + " " + patient.last_name}
 					</div>
 				);
 			});
@@ -33,9 +33,7 @@ export default class PatientList extends Component {
 	render() {
 		return (
 			<div>
-			<p>
 				{ this.state.patients }
-			</p>
 			</div>
 		);
 	}
