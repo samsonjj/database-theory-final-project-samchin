@@ -9,7 +9,7 @@ import {
 import Header from './components/headerComponent/header';
 import Footer from './components/footerComponent/footer';
 import PatientList from './components/patientListComponent/patientList';
-import PatientNameForm from './components/patientNameForm/patientNameForm';
+import PatientReportPage from './components/pages/patientReportPage';
 
 // includes (css and stuff?)
 
@@ -18,7 +18,7 @@ class App extends Component {
 		return (
 			<Router>
 			<div className="App">
-				<PatientNameForm />
+				<PatientReportPage />
 				
 			</div>
 			</Router>

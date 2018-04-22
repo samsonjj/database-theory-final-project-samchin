@@ -4,56 +4,20 @@ import Patient from '../../models/patient';
 class PatientNameForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      value: '',
-      patient: null,
-      output: 'patient information will show here'
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.state = {};
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    let names = this.state.value.split(' ');
-    let nameQuery = '?' + (names.length > 0 ? 'firstname=' + names[0] : '')
-      + (names.length > 1 ? '&lastname=' + names[1] : '');
-    console.log(nameQuery);
-    fetch('http://localhost:3000/patients/search' + nameQuery)
-    .then(results => {
-      return results.json();
-    }).then(data => {
-      let patients = data.patients;
-      if(patients.length > 0) {
-        let patient = new Patient(patients[0]);
-        this.props.updatePatient(patient);
-        this.setState((prevState) => {
-          return {
-            value: prevState.value,
-            patient: patient,
-            output: patient.infoString()
-          };
-        });
-      } else {
-        this.setState((prevState) => {
-          return {
-            value: prevState.value,
-            patient: prevState.patient,
-            output: 'no one by that name exists'
-          };
-        })
-      }
-    })
-    //alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
+  getContracts() {
+  	fetch('http://localhost:3000/patients/search' + nameQuery)
+    .then
   }
 
   render() {
     return (
+    	<div>
+    		<h3>Contracts<h3>
+    		{ this.props.patient}
+    	</div>
       <form className="PatientNameForm" onSubmit={this.handleSubmit}>
         <label>
           Patient Name:
