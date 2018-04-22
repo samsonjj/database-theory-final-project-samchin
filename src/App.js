@@ -9,21 +9,19 @@ import {
 import Header from './components/headerComponent/header';
 import Footer from './components/footerComponent/footer';
 import PatientList from './components/patientListComponent/patientList';
+import PatientNameForm from './components/patientNameForm/patientNameForm';
 
 // includes (css and stuff?)
 
 class App extends Component {
 	render() {
 		return (
-				<Router>
-				<div className="App">
-
-					<Header />
-					<PatientList />
-					<Footer />
-
-				</div>
-				</Router>
+			<Router>
+			<div className="App">
+				<PatientNameForm />
+				
+			</div>
+			</Router>
 		);
 	}
 }
