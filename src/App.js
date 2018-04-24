@@ -16,10 +16,21 @@ import PatientReportPage from './components/pages/patientReportPage';
 class App extends Component {
 	render() {
 		return (
-			<Router>
-			<div className="App">
-				<PatientReportPage />
-				
+			<Router className="App">
+			<div>
+			<ul className="menu">
+        		<li>
+          			<Link to="/">Home</Link>
+        		</li>
+        		<li>
+          			<Link to="/patients">All Patients</Link>
+        		</li>
+        		<li>
+          			<Link to="/search">Search for a Patient</Link>
+        		</li>
+      		</ul>
+      		<Route path="/patients" component={PatientList} />
+      		<Route path="/search" component={PatientReportPage} />
 			</div>
 			</Router>
 		);

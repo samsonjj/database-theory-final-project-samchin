@@ -13,7 +13,6 @@ export default class PatientList extends Component {
 		};
 	}
 
-
 	componentDidMount() {
 		fetch('http://localhost:3000/patients')
 		.then(results => {

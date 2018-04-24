@@ -22,7 +22,7 @@ class PatientNameForm extends Component {
     let names = this.state.value.split(' ');
     let nameQuery = '?' + (names.length > 0 ? 'firstname=' + names[0] : '')
       + (names.length > 1 ? '&lastname=' + names[1] : '');
-    console.log(nameQuery);
+    console.log('http://localhost:3000/patients/search' + nameQuery);
     fetch('http://localhost:3000/patients/search' + nameQuery)
     .then(results => {
       return results.json();
