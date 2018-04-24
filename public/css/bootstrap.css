@@ -1,0 +1,65 @@
+.navbar-default .navbar-nav>li>a {
+ 	font-size: 16px;
+	color: #008ed6;
+	text-transform: capitalize;
+	transition: all .7s ease 0s;
+	-webkit-transition: all .7s ease 0s;
+	-moz-transition: all .7s ease 0s;
+	-o-transition: all .7s ease 0s;
+	-ms-transition: all .7s ease 0s;
+	padding: 8px 0;
+	margin:0 15px;
+	font-weight: 600;
+}
+
+.banner h1{
+	font-size: 48px;
+	color: #008ed6;
+  text-shadow: 2px 2px;
+}
+
+.banner p{
+	font-size: 18px;
+	color: #008ed6;
+  text-shadow: 1px 1px;
+	margin-top: 25px;
+	line-height: 2;
+	font-weight: 600;
+}
+
+.contact p{
+	font-size: 18px;
+	color: #008ed6;
+	line-height: 1;
+}
+
+
+h2{
+	font-size: 36px;
+  color: #008ed6;
+	font-weight: 600;
+	margin-bottom: 25px;
+	margin-top: 0;
+}
+
+.contact{
+	background: #ededed;
+	position: relative;
+	height: 300px;
+}
+
+.banner{
+	background: url(../img/banner.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
