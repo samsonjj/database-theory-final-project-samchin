@@ -18,19 +18,22 @@ class App extends Component {
 		return (
 			<Router className="App">
 			<div>
-			<ul className="menu">
-        		<li>
+			<div class="vertical-menu col-md-1">
+				
           			<Link to="/">Home</Link>
-        		</li>
-        		<li>
+        	
           			<Link to="/patients">All Patients</Link>
-        		</li>
-        		<li>
+        	
           			<Link to="/search">Search for a Patient</Link>
-        		</li>
-      		</ul>
+        		
+          			<Link to="/search">Physicians</Link>
+        		
+			</div>
+			<div class="col-md-5">
       		<Route path="/patients" component={PatientList} />
       		<Route path="/search" component={PatientReportPage} />
+      		</div>
+      		
 			</div>
 			</Router>
 		);
