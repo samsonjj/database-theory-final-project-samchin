@@ -21,7 +21,7 @@ class PatientNameForm extends Component {
 
   setPrescriptions() {
     console.log('setting prescriptions');
-  	fetch('http://localhost:3000/patients/prescriptions?' 
+  	fetch('http://localhost:3000/patients/prescriptions?'
           + 'firstname=' + this.props.patient.first_name
           + '&lastname=' + this.props.patient.last_name
     ).then(results => {
@@ -32,8 +32,10 @@ class PatientNameForm extends Component {
       let prescriptionsArray = data.prescriptions.map((prescription) => {
         return (
         <div key={prescription.prescription_id}>
-          ID: {prescription.prescription_id}
-          medication: {prescription.prescribed_for}
+          <br></br>
+          ID: { prescription.prescription_id }
+          <br></br>
+          medication: { prescription.prescribed_for }
         </div>);
       });
       this.setState( {
@@ -43,14 +45,14 @@ class PatientNameForm extends Component {
   }
 
   render() {
-    console.log('render: ' + this.state.prescriptions + " | " + (this.prescriptions ? this.state.prescriptions.length : ''));
+    console.log('render: ' + this.state.prescriptions + " | " + (this.prescriptions ? this.state.prescriptions.length : ' '));
     return (
 
     	<div>
     		<h3>Prescriptions</h3>
     		{ this.state.prescriptions }
     	</div>
-      
+
     );
   }
 }
